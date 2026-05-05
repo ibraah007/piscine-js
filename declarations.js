@@ -7,7 +7,7 @@ bool:false,
 undef:undefined,
 };
 const nested ={
-arr:[4 ,undefined '2'],
+arr:[4 ,undefined, '2'],
 obj:{
 str:"ibrah",
 num:6,
@@ -20,3 +20,6 @@ Object.freeze(obj);
 Object.freeze(nested);
 Object.freeze(nested.arr);
 Object.freeze(nested.obj);
+
+
+
