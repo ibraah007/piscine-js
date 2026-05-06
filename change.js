@@ -1,8 +1,9 @@
-function get (key) {
+export    function get (key) {
 return sourceObject[key];
 
 }
-function set (key,value) {
+
+export   function set (key,value) {
 return sourceObject[key]= value;
 return value;
 
