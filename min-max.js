@@ -7,3 +7,12 @@ return b
 
 
 }
+function min (a,b) {
+if (b>a) {
+return a
+}else {
+
+return b
+}
+
+}
