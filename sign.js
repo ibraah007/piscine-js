@@ -9,3 +9,8 @@ return -1
 return 0
 }
 }
+function sameSign (a,b) {
+
+return sign(a) === sign(b);
+
+}
