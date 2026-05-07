@@ -1,5 +1,5 @@
 function dogYears (planet,seconds) {
-const earthseconds = 31557600;
+const earthSeconds = 31557600;
 
     const periods = {
         earth: 1.0,
