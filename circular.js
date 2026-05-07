@@ -1,3 +1,3 @@
-const circuar = {};
+const circular = {};
 circular.circular = circular;
 
