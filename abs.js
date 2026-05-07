@@ -2,7 +2,7 @@ function isPositive (number) {
 return number > 0;
 
 }
-function abs (input) {
+function abs (number) {
 if (number < 0 ) {
 return -number
 } else {
