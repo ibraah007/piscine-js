@@ -1,2 +1,2 @@
-const smalls= -Number.MAX_VALUE;
-const biggie= Number.MAX_VALUE+1;
+const smalls = -1.7976931348623157e308;
+const biggie = 1.7976931348623157e308;
