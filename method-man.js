@@ -7,3 +7,8 @@ function sentence (array) {
 
 return arr.join(" ");
 }
+function yell (str) {
+return str.toUpperCase();
+
+
+}
