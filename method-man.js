@@ -3,7 +3,7 @@ return str.split(" ");
 
 }
 
-function sentence (array) {
+function sentence (arr) {
 
 return arr.join(" ");
 }
