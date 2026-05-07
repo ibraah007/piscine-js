@@ -13,7 +13,7 @@ const earth seconds=31557600;
     };
 
 const earthYears = seconds/earthSeconds;
-const planetYears= earthyears/periods[planet];
+const planetYears= earthYears/periods[planet];
 const dogYears = planetYears * 7;
 
 return Number(dogYears.toFixed(2));
