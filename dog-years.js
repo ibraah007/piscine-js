@@ -12,7 +12,11 @@ const earth seconds=31,557,600
         neptune: 164.79132
     };
 
+const earthYears = seconds/earthSeconds;
+const planetYears= earthyears/periods[planet];
+const dogYears = planetYears * 7;
 
+return Number(dogYears.toFixed(2));
 
 
 
