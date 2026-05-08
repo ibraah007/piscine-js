@@ -13,20 +13,15 @@ return -1
 
 
 }
-
-function  lastIndexOf(arr,value, arr.length-1) {
-
-
-for (let i=fromIndex; i>=0;i-- ) {
-
-if (arr[i] === value ){
-return i
+function lastIndexOf(arr, value, fromIndex = arr.length - 1) {
+    for (let i = fromIndex; i >= 0; i--) {
+        if (arr[i] === value) {
+            return i;
+        }
+    }
+    return -1;
 }
 
-}
-return -1
-
-}
 function includes (arr,value, fromIndex=0) {
 
 let position = indexOf (arr,value, fromIndex)
