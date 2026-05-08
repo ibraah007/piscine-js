@@ -40,3 +40,22 @@ return -result
 return result
 
 }
+function modulo (a,b) {
+
+if (b===0) return undefined
+let positiveA = math.abs(a)
+let positiveB = math.abs(a)
+let result = positiveA
+
+while (result >= positiveB) {
+result = result - positive B
+
+}
+
+
+if (a<0) {
+return -result
+}
+return result
+
+}
