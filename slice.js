@@ -5,3 +5,8 @@ end=data.length;
 
 
 }
+  
+    if (start < 0) {
+        start = data.length + start;
+    }
+}
