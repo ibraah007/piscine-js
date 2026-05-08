@@ -27,3 +27,17 @@ return i
 return -1
 
 }
+function includes (arr,value, fromIndex=0) {
+
+let position = indexOf (arr,value, fromIndex)
+
+if (position !=-1) {
+return true 
+}else {
+return false
+}
+
+
+
+
+}
