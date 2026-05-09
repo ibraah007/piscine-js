@@ -2,8 +2,8 @@ function pyramid(char, height) {
     let result = "";
     
     for (let i = 1; i <= height; i++) {
-        // Calculate number of spaces (double what you had)
-        let spaces = 2 * (height - i);
+        // Calculate number of spaces
+        let spaces = height - i;
         
         // Add spaces
         for (let s = 0; s < spaces; s++) {
@@ -23,4 +23,3 @@ function pyramid(char, height) {
     
     return result;
 }
-
