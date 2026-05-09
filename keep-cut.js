@@ -4,3 +4,6 @@ function cutFirst(str) {
 function cutLast(str) {
     return str.slice(0, -2);
 }
+function cutFirstLast(str) {
+    return str.slice(2, -2);
+}
