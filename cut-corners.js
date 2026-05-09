@@ -1,74 +1,45 @@
 function trunc(n) {
-    if (n > 0) {
-        let i = 0;
-        while (i <= n) {
-            i++;
-        }
-        return i - 1;
-    } else if (n < 0) {
-        let i = -1;
-        while (i >= n) {
-            i--;
-        }
-        return i + 1;
+    if (n >= 0) {
+        return n - (n % 1);
+    } else {
+        return n - (n % 1);
     }
-    return 0;
 }
 
 function floor(n) {
     if (n >= 0) {
-        let i = 0;
-        while (i <= n) {
-            i++;
-        }
-        return i - 1;
+        return n - (n % 1);
     } else {
-        let i = -1;
-        while (i > n) {
-            i--;
+        if (n % 1 === 0) {
+            return n;
         }
-        return i;
+        return n - (n % 1) - 1;
     }
 }
 
 function ceil(n) {
     if (n >= 0) {
-        let i = 0;
-        while (i < n) {
-            i++;
+        if (n % 1 === 0) {
+            return n;
         }
-        return i;
+        return n - (n % 1) + 1;
     } else {
-        let i = -1;
-        while (i >= n) {
-            i--;
-        }
-        return i + 1;
+        return n - (n % 1);
     }
 }
 
 function round(n) {
     if (n >= 0) {
-        let integer = 0;
-        while (integer <= n) {
-            integer++;
-        }
-        integer--;
-        let decimal = n - integer;
+        let decimal = n % 1;
         if (decimal >= 0.5) {
-            return integer + 1;
+            return n - decimal + 1;
         }
-        return integer;
+        return n - decimal;
     } else {
-        let integer = 0;
-        while (integer >= n) {
-            integer--;
-        }
-        integer++;
-        let decimal = n - integer;
+        let decimal = n % 1;
         if (decimal <= -0.5) {
-            return integer - 1;
+            return n - decimal - 1;
         }
-        return integer;
+        return n - decimal;
     }
 }
