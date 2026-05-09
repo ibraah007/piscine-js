@@ -1,4 +1,4 @@
-nction getInteger(n) {
+function getInteger(n) {
   if (n === 0) return 0;
   let isNeg = n < 0;
   let num = isNeg ? -n : n;
