@@ -79,3 +79,37 @@ function ceil(n) {
         return -(count - 1);
     }
 }
+function round(n) {
+    
+    let isNegative = n < 0;
+    let absolute = isNegative ? -n : n;
+    
+    
+    let integer = 0;
+    let count = 0;
+    while (integer <= absolute) {
+        integer++;
+        count++;
+    }
+    let truncValue = count - 1;
+    
+    
+    let decimal = absolute - truncValue;
+    
+    
+    if (isNegative) {
+        
+        if (decimal >= 0.5) {
+            return -(truncValue + 1);
+        } else {
+            return -truncValue;
+        }
+    } else {
+        
+        if (decimal >= 0.5) {
+            return truncValue + 1;
+        } else {
+            return truncValue;
+        }
+    }
+}
