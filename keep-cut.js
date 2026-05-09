@@ -13,3 +13,6 @@ function keepFirst(str) {
 function keepLast(str) {
     return str.slice(-2);
 }
+function keepFirstLast(str) {
+    return str.slice(0, 2) + str.slice(-2);
+}
