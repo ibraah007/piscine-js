@@ -1,76 +1,70 @@
 function trunc(n) {
-    // Just remove decimal part
-    if (n >= 0) {
-        let result = 0;
-        while (result + 1 <= n) {
-            result++;
+    if (n > 0) {
+        let i = 0;
+        while (i <= n) {
+            i++;
         }
-        return result;
-    } else {
-        let result = 0;
-        while (result - 1 >= n) {
-            result--;
+        return i - 1;
+    } else if (n < 0) {
+        let i = -1;
+        while (i >= n) {
+            i--;
         }
-        return result;
+        return i + 1;
     }
+    return 0;
 }
 
 function floor(n) {
-    // Floor goes DOWN (more negative for negative numbers)
     if (n >= 0) {
-        // For positive, floor = trunc
-        let result = 0;
-        while (result + 1 <= n) {
-            result++;
+        let i = 0;
+        while (i <= n) {
+            i++;
         }
-        return result;
+        return i - 1;
     } else {
-        // For negative, floor goes DOWN one extra if not whole
-        let result = 0;
-        while (result - 1 >= n) {
-            result--;
+        let i = -1;
+        while (i > n) {
+            i--;
         }
-        // If n is not exactly an integer, subtract 1 more
-        if (result > n) {
-            return result - 1;
-        }
-        return result;
+        return i;
     }
 }
 
 function ceil(n) {
-    // Ceil goes UP (less negative for negative numbers)
     if (n >= 0) {
-        // For positive, ceil goes UP if not whole
-        let result = 0;
-        while (result + 1 <= n) {
-            result++;
+        let i = 0;
+        while (i < n) {
+            i++;
         }
-        if (result < n) {
-            return result + 1;
-        }
-        return result;
+        return i;
     } else {
-        // For negative, ceil = trunc (toward zero)
-        let result = 0;
-        while (result - 1 >= n) {
-            result--;
+        let i = -1;
+        while (i >= n) {
+            i--;
         }
-        return result;
+        return i + 1;
     }
 }
 
 function round(n) {
-    // Round to nearest integer
     if (n >= 0) {
-        let integer = trunc(n);
+        let integer = 0;
+        while (integer <= n) {
+            integer++;
+        }
+        integer--;
         let decimal = n - integer;
         if (decimal >= 0.5) {
             return integer + 1;
         }
         return integer;
     } else {
-        let integer = trunc(n);
+        let integer = 0;
+        while (integer >= n) {
+            integer--;
+        }
+        integer++;
         let decimal = n - integer;
         if (decimal <= -0.5) {
             return integer - 1;
@@ -78,5 +72,3 @@ function round(n) {
         return integer;
     }
 }
-
-
