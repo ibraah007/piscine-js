@@ -1,6 +1,7 @@
 function split(str, sep) {
     let result = [];
     
+    // If separator is empty, split into individual characters
     if (sep === "") {
         for (let i = 0; i < str.length; i++) {
             result.push(str[i]);
@@ -10,9 +11,19 @@ function split(str, sep) {
     
     let temp = "";
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === sep) {
+        // Check if the substring starting at i matches the separator
+        let found = true;
+        for (let j = 0; j < sep.length; j++) {
+            if (str[i + j] !== sep[j]) {
+                found = false;
+                break;
+            }
+        }
+        
+        if (found) {
             result.push(temp);
             temp = "";
+            i = i + sep.length - 1; // Skip the separator
         } else {
             temp = temp + str[i];
         }
@@ -31,3 +42,4 @@ function join(arr, sep) {
     }
     return result;
 }
+
