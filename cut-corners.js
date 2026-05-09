@@ -1,52 +1,71 @@
-function trunc(num) {
-    if (num < 0) {
-        let n = 0
-        while (n > num) {
-            n--
+function trunc(n) {
+    if (n >= 0) {
+        let i = 0;
+        while (i + 1 <= n) {
+            i++;
         }
-        return n === num ? n : n + 1
-    }
-
-    let n = 0
-    while (n <= num) {
-        n++
-    }
-    return n - 1
-}
-
-function floor(num) {
-    let t = trunc(num)
-
-    if (num < 0 && num !== t) {
-        return t - 1
-    }
-
-    return t
-}
-
-function ceil(num) {
-    let t = trunc(num)
-
-    if (num > 0 && num !== t) {
-        return t + 1
-    }
-
-    return t
-}
-
-function round(num) {
-    let t = trunc(num)
-
-    if (num >= 0) {
-        if (num - t >= 0.5) {
-            return t + 1
+        return i;
+    } else {
+        let i = 0;
+        while (i - 1 >= n) {
+            i--;
         }
-        return t
+        return i;
     }
+}
 
-    if (t - num >= 0.5) {
-        return t - 1
+function floor(n) {
+    if (n >= 0) {
+        let i = 0;
+        while (i + 1 <= n) {
+            i++;
+        }
+        return i;
+    } else {
+        let i = -1;
+        while (i > n) {
+            i--;
+        }
+        return i;
     }
+}
 
-    return t
+function ceil(n) {
+    if (n >= 0) {
+        let i = 0;
+        while (i < n) {
+            i++;
+        }
+        return i;
+    } else {
+        let i = -1;
+        while (i + 1 > n) {
+            i--;
+        }
+        return i + 1;
+    }
+}
+
+function round(n) {
+    if (n >= 0) {
+        let i = 0;
+        while (i + 1 <= n) {
+            i++;
+        }
+        let decimal = n - i;
+        if (decimal >= 0.5) {
+            return i + 1;
+        }
+        return i;
+    } else {
+        let i = 0;
+        while (i - 1 >= n) {
+            i--;
+        }
+        let decimal = n - i;
+        if (decimal <= -0.5) {
+            return i - 1;
+        }
+        return i;
+    }
 }
