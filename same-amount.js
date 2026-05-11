@@ -1,18 +1,6 @@
 function sameAmount(str, reg1, reg2) {
+    let match1 = str.match(new RegExp(reg1, "g")) || []
+    let match2 = str.match(new RegExp(reg2, "g")) || []
 
- let regex1 = new RegExp(reg1.source, 'g');
-    let regex2 = new RegExp(reg2.source, 'g');
-    
-
-
-
-
-let matches1= str.match(reg1)
-
-let count1=matches ? matches1.length : 0
-
-let matches2 = str.match(reg2)
-let count2 = matches2 ? matches2.length : 0
-
-return count1 === count2
+    return match1.length === match2.length
 }
