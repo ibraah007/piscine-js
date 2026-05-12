@@ -17,3 +17,11 @@ const now = newDate()
 return date.getTime() > now.getTime()
 
 }
+function isPast(date) {
+if (!isValid(date)) return false
+const now = newDate()
+return date.getTime() < nowgetTime()
+
+
+
+}
