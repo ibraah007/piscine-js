@@ -37,3 +37,16 @@ function isFuture(date) {
     
     return time > now;
 }
+function isPast(date) {
+    
+    if (!isValid(date)) return false;
+    
+    
+    const now = Date.now();
+    
+    
+    const time = date instanceof Date ? date.getTime() : date;
+    
+    
+    return time < now;
+}
