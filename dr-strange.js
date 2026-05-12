@@ -14,3 +14,16 @@ return days[index]
 
 
 }
+function timeTravel({ date, hour, minute, second }) {
+
+const newDate = new Date(date)
+newDate.setHours(hour)
+newDate.setMinutes(mins)
+newDate.setSecond(sec)
+
+return newDate
+
+
+
+
+}
