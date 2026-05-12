@@ -1,5 +1,5 @@
  function isValid(date){
-return  dateinstanceof Date && !isNan(date.getTime())
+return  date instanceof Date && !isNaN(date.getTime())
 
 }
 function isAfter(date1, date2) {
@@ -13,14 +13,14 @@ function isBefore(date1, date2) {
 }
 function isFuture(date){
 if (!isValid(date)) return false
-const now = newDate()
+const now = new Date()
 return date.getTime() > now.getTime()
 
 }
 function isPast(date) {
 if (!isValid(date)) return false
-const now = newDate()
-return date.getTime() < nowgetTime()
+const now = new Date()
+return date.getTime() < now.getTime()
 
 
 
