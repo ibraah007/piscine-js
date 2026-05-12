@@ -24,3 +24,16 @@ function isAfter(date1, date2) {
     
     return time1 > time2;
 }
+function isFuture(date) {
+    
+    if (!isValid(date)) return false;
+    
+    
+    const now = Date.now();
+    
+    
+    const time = date instanceof Date ? date.getTime() : date;
+    
+    
+    return time > now;
+}
