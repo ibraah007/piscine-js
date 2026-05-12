@@ -19,7 +19,7 @@ function timeTravel({ date, hour, minute, second }) {
 const newDate = new Date(date)
 newDate.setHours(hour)
 newDate.setMinutes(minute)
-newDate.setSecond(second)
+newDate.setSeconds(second)
 
 return newDate
 
