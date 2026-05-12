@@ -1,4 +1,5 @@
-function firstDayWeek(week, year) {
+ let targetMonday = new Date(firstMonday);
+    targetMonday.setDate(firstMonday.getDate() + (week - 1) * 7);function firstDayWeek(week, year) {
 
     let date = new Date(year + "-01-01");
     let dayOfWeek = date.getDay();
