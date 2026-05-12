@@ -11,3 +11,9 @@ return date1>date2
 function isBefore(date1, date2) {
     return date1. < date2.
 }
+function isFuture(date){
+if (!isValid(date)) return false
+const now = newDate()
+return date.getTime() > now.getTime()
+
+}
